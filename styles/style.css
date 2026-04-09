@@ -18,3 +18,52 @@
   align-items: center;
   gap: 64px;
 }
+
+.cover {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden; /* чтобы фон-слой не вылезал */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+  padding-block: 80px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 175px 40px 80px 165px;
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background:
+    linear-gradient(rgba(29, 47, 48, 0.7)),
+    url("../img/cover_img.jpg") center / cover no-repeat;
+}
+
+/* Поднимаем весь контент над псевдоэлементом */
+.cover > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cover__title {
+  width: 688px;
+  font-size: 60px;
+  font-family: var(--font-title);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.cover__description {
+  width: 632px;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 16px;
+  margin: 16px 0 0;
+}
