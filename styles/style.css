@@ -26,12 +26,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 24px;
+  gap: 0px;
   padding-block: 80px;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding: 175px 40px 80px 165px;
+  padding: 175px 40px 115px 165px;
 }
 
 .cover::before {
@@ -66,4 +66,19 @@
   font-weight: 400;
   font-size: 16px;
   margin: 16px 0 0;
+  letter-spacing: 0.7px;
+}
+
+.cover__button {
+  width: 160px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 16px;
+  margin: 16px 0 0;
+  letter-spacing: 0.7px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-accent);
+  margin: 24px 0 0;
 }
