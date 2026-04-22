@@ -1,8 +1,8 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  gap: 125px;
   align-items: center;
-  padding: 20px 165px;
+  padding: 15px 165px;
 }
 
 .header__nav-list {
@@ -19,34 +19,42 @@
   gap: 64px;
 }
 
-.cover {
+.cover,
+.contact {
   position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-inline: 165px;
+}
+
+.cover {
   min-height: 100vh;
-  overflow: hidden; /* чтобы фон-слой не вылезал */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 0px;
-  padding-block: 80px;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding: 175px 40px 115px 165px;
+  padding-block: 115px;
 }
 
-.cover::before {
+.cover::before,
+.contact::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
+}
 
+.cover::before {
   background:
     linear-gradient(rgba(29, 47, 48, 0.7)),
     url("../img/cover_img.jpg") center / cover no-repeat;
 }
 
 /* Поднимаем весь контент над псевдоэлементом */
-.cover > * {
+.cover > *,
+.contact > * {
   position: relative;
   z-index: 1;
 }
@@ -65,8 +73,7 @@
   font-family: var(--font-main);
   font-weight: 400;
   font-size: 16px;
-  margin: 16px 0 0;
-  letter-spacing: 0.7px;
+  margin: 20px 0 0;
 }
 
 .cover__button {
@@ -75,7 +82,6 @@
   font-weight: 700;
   font-size: 16px;
   margin: 16px 0 0;
-  letter-spacing: 0.7px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -90,7 +96,7 @@
 .gallery__list {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 30px;
 }
 
 .gallery__item {
@@ -115,14 +121,14 @@
 
 .gallery__title {
   font-size: 24px;
-  padding-inline-start: 16px;
+  padding-inline-start: 15px;
+  margin-top: 20px;
 }
 
 .gallery__description {
   font-size: 16px;
   color: var(--color-text-card);
-  margin: 8px 16px 0;
-  line-height: 1.5;
+  margin: 9px 15px 0;
 }
 
 .gallery__button {
@@ -144,68 +150,114 @@
 }
 
 .gallery__page {
-    font-family: var(--font-title);
-    font-size: 24px;
-    font-weight: 700;
+  font-family: var(--font-title);
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .about {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 53px;
 }
 
 .about__title {
-    font-size: 48px;
-    font-style: italic;
+  font-size: 48px;
+  font-style: italic;
+  letter-spacing: 1.4%;
 }
 
 .about__list {
-    display: grid;
-    grid-template-columns: 825px 255px;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: 825px 255px;
+  gap: 30px;
 }
 
 .about__card__image {
-    background-color: var(--color-bg-dark);
-    object-fit: cover;
-    width: 100%;
-    height: auto;
+  background-color: var(--color-bg-dark);
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
-
 .about__card__content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 16px;
-    background-color: var(--color-accent);
-    min-height: 493px;            /* высота как у изображения */
-    padding: 16px 16px 24px; 
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background-color: var(--color-accent);
+  min-height: 493px; /* высота как у изображения */
+  padding: 20px 16px;
 }
 
 .about__card__title {
-    font-size: 24px;
-    font-family: var(--font-title);
-    color: var(--color-bg-main);
+  font-size: 24px;
+  font-family: var(--font-title);
+  color: var(--color-bg-main);
 }
 
 .about__card__description {
-    font-size: 16px;
-    color: var(--color-text-accent);
-    line-height: 150%;
-    margin-bottom: 25px;
+  font-size: 16px;
+  color: var(--color-text-accent);
+  line-height: 150%;
+  margin-bottom: 25px;
 }
 
 .about__card__button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--color-bg-dark);
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: auto;
-    margin-bottom: 8px;
-    align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-bg-dark);
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: auto;
+  margin-bottom: 3px;
+  align-self: flex-start;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding-block: 50px;
+  margin-top: 60px;
+}
+
+.contact::before {
+  background:
+    linear-gradient(rgba(29, 47, 48, 0.7)),
+    url("../img/contact_img.png") center / cover no-repeat;
+}
+
+.contact__title {
+  font-size: 48px;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.contact__description {
+  width: min(825px, 100%);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact__input {
+  width: 350px;
+  height: 45px;
+  padding: 10px 16px;
+}
+
+.contact__button {
+  align-self: flex-start;
+  color: var(--color-bg-dark);
+  background-color: var(--color-accent);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 11px 26px;
 }
