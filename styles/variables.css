@@ -1,0 +1,11 @@
+:root {
+    --font-main: "Open Sans", Arial, sans-serif;
+    --font-title: "Cormorant", "Times New Roman", serif;
+
+    --color-bg-main: #1D2F30;
+    --color-bg-dark: #0B1919;
+    --color-accent: #BAE249;
+    --color-title: #FFFFFF;
+    --color-text-card: #899D9D;
+    --color-text-accent: #506829;
+  }

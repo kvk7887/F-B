@@ -12,7 +12,7 @@
   <body class="body">
     <header class="header">
       <a href="#" class="header__logo">
-        <img src="" alt="logo" />
+        <img src="./img/logo.svg" alt="F&B" width="65" height="20" />
       </a>
       <nav class="header__nav">
         <ul class="header__nav-list">
@@ -30,8 +30,18 @@
           </li>
         </ul>
       </nav>
-      <form class="search-form">Поиск</form>
-      <a>Кнопка входа в лк</a>
+      <ul class="header__actions" aria-label="Действия пользователя">
+        <li>
+          <button class="header__icon-btn" type="button" aria-label="Поиск">
+            <img src="./img/search.svg" alt="" width="24" height="24" />
+          </button>
+        </li>
+        <li>
+          <a class="header__icon-btn" href="#" aria-label="Войти">
+            <img src="./img/log-in.svg" alt="" width="24" height="24" />
+          </a>
+        </li>
+      </ul>
     </header>
     <main class="main">
       <section class="cover">
@@ -42,35 +52,39 @@
           и социальной культуры.
         </p>
         <a href="#" class="cover__button"
-          >Исследовать
-          <svg></svg>
+          >Исследовать          
+            <img src="./img/arrow_right.svg" alt="" width="43" height="0" />
         </a>
       </section>
       <section class="gallery" id="gallery">
         <ul class="gallery__list">
           <li class="gallery__item">
-            <h3 class="gallery__title">Fig. 1 (plant)</h2>
+            <img class="gallery__image" src="./img/Layer 3.png">
+            <h3 class="gallery__title">Fig. 1 (plant)</h3>     
             <p class="gallery__description">
               Имеется спорная точка зрения, гласящая примерно следующее: активно развивающиеся страны третьего мира своевременно верифицированы.
             </p>
             <button class="gallery__button">Посмотреть</button>
           </li>
           <li class="gallery__item">
-            <h3 class="gallery__title">Fig. 2 (flower)</h2>
+            <img class="gallery__image" src="./img/Layer 2.png">
+            <h3 class="gallery__title">Fig. 2 (flower)</h3>
             <p class="gallery__description">
               Прежде всего, синтетическое тестирование влечет за собой процесс внедрения и модернизации условий.
             </p>
             <button class="gallery__button">Посмотреть</button>
           </li>
           <li class="gallery__item">
-            <h3 class="gallery__title">Fig. 3 (leaf)</h2>
+            <img class="gallery__image" src="./img/Layer 4.png">
+            <h3 class="gallery__title">Fig. 3 (leaf)</h3>
             <p class="gallery__description">
               Лишь непосредственные участники прогресса неоднозначны и будут в равной степени предоставлены сами себе для работы.
             </p>
             <button class="gallery__button">Посмотреть</button>
           </li>
           <li class="gallery__item">
-            <h3 class="gallery__title">Fig. 4 (wood)</h2>
+            <img class="gallery__image" src="./img/Layer 1.png">
+            <h3 class="gallery__title">Fig. 4 (wood)</h3>
             <p class="gallery__description">
               Базовый вектор развития не даёт нам иного выбора, кроме определения новых предложений.
             </p>
